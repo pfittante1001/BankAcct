@@ -14,6 +14,7 @@ namespace BankAcct
             int tempParse;
             int menuSel;
             bool exitProgram = false;
+            
             while (exitProgram == false)
             {
                 Console.Write("\n\t\tWelcome to The Third National Bank of Uganda\n\n");
@@ -44,7 +45,8 @@ namespace BankAcct
                 {
                     case 1:
                         Console.Clear();
-                        Console.WriteLine("case one");
+                        Client client1 = new Client("Pete", "Fittante", "3256 W82nd Cleveland", "pfittante@yahoo.com", "696-kids");
+                        client1.InformationMenuMethod();   
                         break;
                     case 2:
                         Console.Clear();
@@ -69,7 +71,14 @@ namespace BankAcct
                 }
             }
         }
-
+        //public static void CustomerInformation(string fname, string lname)
+        //{
+        //    Console.Clear();
+        //    Console.WriteLine();
+        //    Console.WriteLine("Customer Firstname: {0}", fname);
+        //    Console.WriteLine("Customer Lastname:  {0}", lname);
+            
+        //}
         public static void AcctBalanceWindow(int menuSel)
         {
             int tempParse;
@@ -104,8 +113,7 @@ namespace BankAcct
                     Console.WriteLine("case two");
                     break;
                 default:
-                    Console.Clear();
-                    
+                    Console.Clear();                    
                     break;
             }
             Console.Clear();
