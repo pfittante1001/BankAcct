@@ -77,7 +77,7 @@ namespace BankAcct
             Console.Write("\n\t\tPlease select 1-2 from the following menu items\n\n");
             Console.Write("\n1. View checking account balance\n");
             Console.Write("\n2. View savings account Balance\n");
-            Console.Write("\n5. Exit\n\n");
+            Console.Write("\n3. Return to main menu\n\n");
             String menuSelStr = Console.ReadLine().ToUpper();
             while (int.TryParse(menuSelStr, out tempParse) == false)
             {
@@ -105,9 +105,10 @@ namespace BankAcct
                     break;
                 default:
                     Console.Clear();
-                    Console.WriteLine("Please enter a number between 1-2");
+                    
                     break;
             }
+            Console.Clear();
         }
         public static void ExitMethod(string exitPro)
         {
