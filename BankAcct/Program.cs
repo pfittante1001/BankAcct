@@ -14,7 +14,8 @@ namespace BankAcct
             int tempParse;
             int menuSel;
             bool exitProgram = false;
-            
+            Account bal1 = new Account(100.00);
+            bal1.AccountBalanceMethod();
             while (exitProgram == false)
             {
                 Console.Write("\n\t\tWelcome to The Third National Bank of Uganda\n\n");
@@ -50,11 +51,13 @@ namespace BankAcct
                         break;
                     case 2:
                         Console.Clear();
-                        Console.WriteLine("case two");
+                        AcctBalanceWindow(menuSel);
                         break;
                     case 3:
                         Console.Clear();
-                        AcctBalanceWindow(menuSel);
+                        Deposit deposit1 = new Deposit(50.25);
+                        deposit1.AccountBalanceMethod();
+                        deposit1.BalanceInformationMenuMethod();
                         break;
                     case 4:
                         Console.Clear();

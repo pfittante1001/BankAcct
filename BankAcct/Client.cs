@@ -40,6 +40,8 @@ namespace BankAcct
             this.emailAddress = emailConst;
             this.phoneNumber = phoneConst;
         }
+
+        //methods
         public override string FirstNameMethod()
         {
             string fName = firstName;
